@@ -58,6 +58,20 @@
 
     echo "<br><br><br>";
     print_r($cars);
+
+
+    //Associative Arrays
+
+    $vehicles = array("AUDI" => 50.500, "Mercedes" => 40.700, "Range Rover" => 60.300);
+    echo "<br><br><br>";
+    var_dump($vehicles);
+    print_r($vehicles); //print_r is converting into human readable manner
+
+    $carNew["Mercedes"] = 50.554;
+
+    foreach ($vehicles as $key => $value) {
+        echo "<br><br><br>" . $key . " and " . $value;
+    }
     ?>
 </body>
 
