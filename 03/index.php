@@ -72,6 +72,15 @@
     foreach ($vehicles as $key => $value) {
         echo "<br><br><br>" . $key . " and " . $value;
     }
+
+    //Multidimentional Arrays
+
+    // $courses = array(array(), "React Native", "Vue Js");
+    $courses = array("React Native", "Native Script", "Flutter", "Vue Js", "React Js", "Angular Js", "Laravel");
+    $coursesOrganized = array("Mobile" => array("React Native", "Native Script", "Flutter"), "Desktop" => array("Vue Js", "React Js", "Angular Js", "Laravel"));
+
+    echo "<br><br><br>";
+    echo $coursesOrganized["Mobile"][0];
     ?>
 </body>
 
