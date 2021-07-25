@@ -52,6 +52,25 @@
 
     //Logical Operators
 
+    echo ++$x;
+    echo $x++;
+
+    echo "<br><br>";
+
+    //Constants
+    //Constants are always uppecase
+    //Name has the same rules as variables
+
+    //Define(Name, Argument_Name);
+
+    define("COMPANY_NAME", "Apple");
+
+    echo COMPANY_NAME . "<br>";
+
+    const MY_NAME = "Sithum";
+
+    echo MY_NAME;
+
     ?>
 </body>
 
