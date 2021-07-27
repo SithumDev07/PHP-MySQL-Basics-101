@@ -73,8 +73,16 @@
     //If we do not include an expiration datel, the cookie will only be stored for the current session.
 
     //Files
+    //$_FILES
+    // 1. Upload it to root
+    // 2. Directly to the databse
 
     print_r($_COOKIE);
+
+    echo $name = $_FILES['file']['name'] . "<br>";
+    echo $type = $_FILES['file']['type'] . "<br>";
+    echo $temp_location = $_FILES['file']['tmp_name'] . "<br>";
+    echo $error = $_FILES['file']['error'];
 
     ?>
 
@@ -93,6 +101,12 @@
         <input type="password" name="password">
         <button type="submit">Submit</button>
     </form> -->
+
+    <!-- Enctype how the form data should be encoded. if it is not there, it won't work -->
+    <form action="index.php" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button type="submit">Upload</button>
+    </form>
 
 </body>
 
