@@ -53,7 +53,14 @@
     //is the timestamp is the value represented as seconds calculated, since UNIX Epoch, January 1, 1970 and also called as UNIX timestamp.
     echo $time . "<br><br>";
 
-    echo date('m/d/Y H:i:s a', $time);
+    echo date('m/d/Y H:i:s a', $time) . "<br><br>";
+
+    //Random Number Generator
+    // echo rand();
+    // echo getrandmax();
+    // $min = 1;
+    // $max = 10;
+    echo rand(1, 10);
 
     ?>
 </body>
