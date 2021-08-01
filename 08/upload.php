@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
             if ($size < 30000) {
                 $newFileName = uniqid('', true) . "." . $fileExtension;
                 $fileDestination = "uploads/" . $newFileName;
-                move_uploaded_file($tmp_name, $fileDestination);
+                move_uploaded_file($tmp_name, $fileDestination) or die('cant move');
                 header("Location: index.php?uploadedsuccess");
             } else {
                 echo "<br><br> Sorry your file is too big!";

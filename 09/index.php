@@ -12,7 +12,7 @@
 
     <?php
     // $path = $_SERVER['DOCUMENT_ROOT'] . '/uploads/file.txt';
-    $path = __DIR__ . '/file.txt';
+    $path = __DIR__ . '/fileNew.txt';
     $myFile = fopen($path, "w") or die('Can\'t create file');
     // sudo chown -R $USER:$USER /var/www
     // chmod -R 777 ./ Write this and giver permissions 
