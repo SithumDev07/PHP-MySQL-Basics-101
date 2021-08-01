@@ -4,7 +4,13 @@ require_once 'includes/header.php';
 
 ?>
 
-Home
+<?php
+if (isset($_SESSION['sessionId'])) {
+    echo 'You are logged in';
+} else {
+    echo 'Home';
+}
+?>
 
 <?php
 
