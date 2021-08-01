@@ -103,7 +103,7 @@
     </form> -->
 
     <!-- Enctype how the form data should be encoded. if it is not there, it won't work -->
-    <form action="index.php" method="POST" enctype="multipart/form-data">
+    <form action="upload.php" method="POST" enctype="multipart/form-data">
         <input type="file" name="file">
         <button type="submit">Upload</button>
     </form>
