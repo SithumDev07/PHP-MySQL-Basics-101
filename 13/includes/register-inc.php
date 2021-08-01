@@ -46,11 +46,19 @@ if (isset($_POST['submit'])) {
                     header("Location: ../register.php?error=sqlerror");
                     exit();
                 } else {
-                    mysqli_stmt_bind_param($stmt, "ss", $username, $password);
+
+                    //Hash the password
+                    $hashPass = password_hash($password, PASSWORD_DEFAULT);
+
+                    mysqli_stmt_bind_param($stmt, "ss", $username, $hashPass);
                     mysqli_stmt_execute($stmt);
-                    mysqli_stmt_store_result($stmt);
+                    header("Location: ../register.php?success=registered");
+                    exit();
                 }
             }
         }
     }
+
+    mysqli_stmt_close($stmt);
+    mysqli_close($conn);
 }
